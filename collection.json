@@ -1,0 +1,234 @@
+[
+  {
+    "name": "Adobe Acrobat",
+    "slug": "adobe-acrobat",
+    "company": "Adobe",
+    "category": "Office",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/acrobat.html"
+  },
+  {
+    "name": "Adobe Acrobat Pro",
+    "slug": "adobe-acrobat-pro",
+    "company": "Adobe",
+    "category": "Office",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/acrobatpro.html"
+  },
+  {
+    "name": "Adobe Aero",
+    "slug": "adobe-aero",
+    "company": "Adobe",
+    "category": "VR",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/aero.html"
+  },
+  {
+    "name": "Adobe After Effects",
+    "slug": "adobe-after-effects",
+    "company": "Adobe",
+    "category": "Graphics",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/aftereffects.html"
+  },
+  {
+    "name": "Adobe Animate",
+    "slug": "adobe-animate",
+    "company": "Adobe",
+    "category": "Animation",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/animate.html"
+  },
+  {
+    "name": "Adobe Audition",
+    "slug": "adobe-audition",
+    "company": "Adobe",
+    "category": "Sound",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/audition.html"
+  },
+  {
+    "name": "Adobe Bridge",
+    "slug": "adobe-bridge",
+    "company": "Adobe",
+    "category": "Manage",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/bridge.html"
+  },
+  {
+    "name": "Adobe Character Animator",
+    "slug": "adobe-character-animator",
+    "company": "Adobe",
+    "category": "Animation",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/character-animator.html"
+  },
+  {
+    "name": "Adobe Dimension",
+    "slug": "adobe-dimension",
+    "company": "Adobe",
+    "category": "Design",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/dimension.html"
+  },
+  {
+    "name": "Adobe Dreamweaver",
+    "slug": "adobe-dreamweaver",
+    "company": "Adobe",
+    "category": "Code",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/dreamweaver.html"
+  },
+  {
+    "name": "Adobe Fonts",
+    "slug": "adobe-fonts",
+    "company": "Adobe",
+    "category": "Font",
+    "date": "2021-10-01",
+    "src": "https://fonts.adobe.com"
+  },
+  {
+    "name": "Adobe Fresco",
+    "slug": "adobe-fresco",
+    "company": "Adobe",
+    "category": "Graphics",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/fresco.html"
+  },
+  {
+    "name": "Adobe Illustrator",
+    "slug": "adobe-illustrator",
+    "company": "Adobe",
+    "category": "Graphics",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/illustrator.html"
+  },
+  {
+    "name": "Adobe InCopy",
+    "slug": "adobe-in-copy",
+    "company": "Adobe",
+    "category": "Text",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/incopy.html"
+  },
+  {
+    "name": "Adobe InDesign",
+    "slug": "adobe-in-design",
+    "company": "Adobe",
+    "category": "Graphics",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/indesign.html"
+  },
+  {
+    "name": "Adobe Media Encoder",
+    "slug": "adobe-media-encoder",
+    "company": "Adobe",
+    "category": "Movie",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/media-encoder.html"
+  },
+  {
+    "name": "Adobe Photoshop",
+    "slug": "adobe-photoshop",
+    "company": "Adobe",
+    "category": "Graphics",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/photoshop.html"
+  },
+  {
+    "name": "Adobe Photoshop Camera",
+    "slug": "adobe-photoshop-camera",
+    "company": "Adobe",
+    "category": "Photo",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/photoshop-camera.html"
+  },
+  {
+    "name": "Adobe Photoshop Express",
+    "slug": "adobe-photoshop-express",
+    "company": "Adobe",
+    "category": "Graphics",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/photoshop-express.html"
+  },
+  {
+    "name": "Adobe Photoshop Lightroom",
+    "slug": "adobe-photoshop-lightroom",
+    "company": "Adobe",
+    "category": "Graphics",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/photoshop-lightroom.html"
+  },
+  {
+    "name": "Adobe Photoshop Lightroom Classic",
+    "slug": "adobe-photoshop-lightroom-classic",
+    "company": "Adobe",
+    "category": "Graphics",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/photoshop-lightroom-classic.html"
+  },
+  {
+    "name": "Adobe Portfolio",
+    "slug": "adobe-portfolio",
+    "company": "Adobe",
+    "category": "Social",
+    "date": "2021-10-01",
+    "src": "https://portfolio.adobe.com"
+  },
+  {
+    "name": "Adobe Prelude",
+    "slug": "adobe-prelude",
+    "company": "Adobe",
+    "category": "Manage",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/prelude.html"
+  },
+  {
+    "name": "Adobe Premiere Pro",
+    "slug": "adobe-premiere-pro",
+    "company": "Adobe",
+    "category": "Movie",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/premiere.html"
+  },
+  {
+    "name": "Adobe Premiere Rush",
+    "slug": "adobe-premiere-rush",
+    "company": "Adobe",
+    "category": "Movie",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/premiere-rush.html"
+  },
+  {
+    "name": "Adobe Spark",
+    "slug": "adobe-spark",
+    "company": "Adobe",
+    "category": "Graphics",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/spark.html"
+  },
+  {
+    "name": "Adobe Stock",
+    "slug": "adobe-stock",
+    "company": "Adobe",
+    "category": "Stock",
+    "date": "2021-10-01",
+    "src": "https://stock.adobe.com"
+  },
+  {
+    "name": "Adobe XD",
+    "slug": "adobe-xd",
+    "company": "Adobe",
+    "category": "Interface",
+    "date": "2021-10-01",
+    "src": "https://www.adobe.com/products/xd.html"
+  },
+  {
+    "name": "Behance",
+    "slug": "behance",
+    "company": "Adobe",
+    "category": "Social",
+    "date": "2021-10-01",
+    "src": "https://www.behance.net"
+  }
+]
