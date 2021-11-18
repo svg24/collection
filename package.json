@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "workspaces": [
-    "packages/react",
-    "packages/vue"
+    "packages/*"
   ],
   "scripts": {
     "build": ""
