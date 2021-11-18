@@ -1,0 +1,26 @@
+{
+  "env": {
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "root": true,
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "import/order": [
+      "warn",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ]
+  }
+}

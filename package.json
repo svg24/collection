@@ -1,0 +1,17 @@
+{
+  "name": "svg24",
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "packages/react",
+    "packages/vue"
+  ],
+  "scripts": {
+    "build": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "svgo": "^2.8.0"
+  }
+}

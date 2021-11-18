@@ -1,0 +1,17 @@
+{
+  "name": "@svg24/react",
+  "version": "0.0.0",
+  "homepage": "https://github.com/svg24/collection#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svg24/collection.git",
+    "directory": "packages/react"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

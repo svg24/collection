@@ -1,0 +1,17 @@
+{
+  "name": "@svg24/vue",
+  "version": "0.0.0",
+  "homepage": "https://github.com/svg24/collection#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svg24/collection.git",
+    "directory": "packages/vue"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
