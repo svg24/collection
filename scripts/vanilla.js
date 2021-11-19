@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
-import path from 'path';
 import svgo from 'svgo';
+import { checkIsSVG } from './utils';
 
 const SOURCE = './src';
 const OUTPUT = './packages/vanilla';
@@ -68,12 +68,6 @@ const POST_SVGO_OPTIONS = {
     },
   ],
 };
-
-/**
- * @param {string} name
- * @returns {boolean}
- */
-const checkIsSVG = (name) => path.extname(name) === '.svg';
 
 /**
  * @param {string} name
