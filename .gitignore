@@ -1,3 +1,5 @@
 node_modules
-packages/*/*
-!packages/*/package.json
+packages/react/*
+!packages/react/package.json
+packages/vue/*
+!packages/vue/package.json
