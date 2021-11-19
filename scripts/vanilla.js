@@ -3,7 +3,7 @@ import path from 'path';
 import svgo from 'svgo';
 
 const SOURCE = './src';
-const PACKAGE = './packages/vanilla';
+const OUTPUT = './packages/vanilla';
 const PRE_SVGO_OPTIONS = {
   plugins: [
     'cleanupAttrs',
@@ -101,7 +101,7 @@ const pre = {
 
       const ver = getFileVersion(item);
       const local = {
-        root: `${PACKAGE}/${dir}`,
+        root: `${OUTPUT}/${dir}`,
         file: `${dir}.svg`,
         get toDir() {
           return ver ? `${local.root}/${ver}` : `${local.root}`;
@@ -204,7 +204,7 @@ const post = {
       }));
     };
 
-    const root = `${PACKAGE}/${dir}`;
+    const root = `${OUTPUT}/${dir}`;
     const dirents = await fs.readdir(root, { withFileTypes: true });
 
     await write(root, dirents);
@@ -223,7 +223,7 @@ const post = {
       return;
     }
 
-    const dirents = await fs.readdir(PACKAGE, { withFileTypes: true });
+    const dirents = await fs.readdir(OUTPUT, { withFileTypes: true });
 
     await Promise.all(dirents.map(async (dirent) => {
       if (dirent.isDirectory()) await post.write(dirent.name);
