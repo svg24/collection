@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": ""
+    "build:vanilla": "node scripts/vanilla.js"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
