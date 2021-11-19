@@ -83,7 +83,7 @@ const getFileVersion = (name) => {
 const pre = {
   /**
    * @param {string} dir
-   * @returns {Promise<[string, { root: string, file: string }]>}
+   * @returns {Promise<[string, string]>}
    */
   write: async (dir) => {
     const root = `${SOURCE}/${dir}`;
@@ -93,47 +93,40 @@ const pre = {
     await Promise.all(items.map(async (item) => {
       if (!checkIsSVG(item)) return;
 
-      const ver = getFileVersion(item);
-      const local = {
-        root: `${OUTPUT}/${dir}`,
-        file: `${dir}.svg`,
-        get toDir() {
-          return ver ? `${local.root}/${ver}` : `${local.root}`;
-        },
-        get toFile() {
-          return `${local.toDir}/${local.file}`;
-        },
-      };
       const buf = await fs.readFile(`${root}/${item}`);
       const { data } = svgo.optimize(buf, PRE_SVGO_OPTIONS);
+      const subRoot = `${OUTPUT}/${dir}`;
 
-      await fs.mkdir(local.toDir, { recursive: true });
-      await fs.writeFile(local.toFile, data, 'utf8');
+      await fs.mkdir(subRoot, { recursive: true });
+      await fs.writeFile(`${subRoot}/${item}`, data, 'utf8');
 
-      res.push([ver, {
-        root: local.root,
-        file: local.file,
-      }]);
+      res.push([subRoot, item]);
     }));
 
     return res;
   },
 
   /**
-   * @param {[string, { root: string, file: string }]} res
+   * @param {string} dir
+   * @param {[string, string]} res
    * @returns {Promise<void>}
    */
-  bind: async (res) => {
-    const index = res.reduce((prevIndex, [curVal], curIndex, arr) => {
+  bind: async (dir, res) => {
+    const index = res.reduce((prevIndex, [, curItem], curIndex, arr) => {
+      const ver = getFileVersion(curItem);
+
+      if (!ver) return null;
+
       const prev = (new Date(arr[prevIndex])).getTime();
-      const cur = (new Date(curVal)).getTime();
+      const cur = (new Date(ver)).getTime();
 
       return !prevIndex || cur > prev ? curIndex : prevIndex;
     }, null);
-    const [ver, local] = res[index];
 
-    if (ver) {
-      await fs.symlink(`${ver}/${local.file}`, `${local.root}/${local.file}`);
+    if (index !== null) {
+      const [root, item] = res[index];
+
+      await fs.symlink(item, `${root}/${dir}.svg`);
     }
   },
 
@@ -146,7 +139,7 @@ const pre = {
       await Promise.all(dirs.map(async (dir) => {
         const res = await pre.write(dir);
 
-        await pre.bind(res);
+        await pre.bind(dir, res);
       }));
 
       return;
@@ -160,7 +153,7 @@ const pre = {
       if (dirent.isDirectory()) {
         const res = await pre.write(dirent.name);
 
-        await pre.bind(res);
+        await pre.bind(dirent.name, res);
       }
     }));
   },
