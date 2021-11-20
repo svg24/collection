@@ -9,7 +9,10 @@ const OUTPUT = './packages/react';
  * @returns {string}
  */
 const getDec = (name) => (
-  `declare function ${name}(props: React.ComponentProps<'svg'>): JSX.Element;`
+  `declare function ${name}(
+  props: React.ComponentProps<'svg'>,
+  svgRef: React.ForwardedRef<SVGElement>,
+): JSX.Element;`
 );
 
 /**
@@ -23,7 +26,9 @@ export const output = OUTPUT;
  * @returns {Promise<{ cjs: string, js: string, ts: string }>}
  */
 export const getCode = async (name, content) => {
-  const component = await svgr.default(content, {}, { componentName: name });
+  const component = await svgr.default(content, {
+    ref: true,
+  }, { componentName: name });
   const { code } = await babel.transformAsync(component, {
     plugins: [[reactJSX, { useBuiltIns: true }]],
   });
