@@ -32,3 +32,17 @@ export const getLastInPath = (str) => str.match(/.+\/(?<file>.+)$/).groups.file;
 export const toCamelCaseFromSvg = (file) => (
   toCamelCase(file.replace('.svg', ''))
 );
+
+/**
+ * @param {string} name
+ * @param {Buffer} buf
+ * @returns {string}
+ */
+export const getPreview = (name, buf) => (
+  `![${name}](data:image/svg+xml;base64,${
+    Buffer.from(buf.toString().replace(
+      '<svg',
+      '<svg width="64" height="64"',
+    )).toString('base64')
+  })`
+);

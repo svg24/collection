@@ -116,7 +116,7 @@ const writeComponents = async (dir, libs) => {
       names.push(name);
 
       await Promise.all(libs.map(async (lib) => {
-        const { cjs, js, ts } = await lib.getCode(name, buf.toString());
+        const { cjs, js, ts } = await lib.getCode(name, buf);
         const out = `${lib.output}/${toCamelCase(dir)}/`;
 
         await fs.mkdir(out, { recursive: true });
@@ -165,12 +165,15 @@ const writeComponents = async (dir, libs) => {
       if (link) {
         indexes.push(name);
 
-        const latest = toCamelCaseFromSvg((getLastInPath(link)));
+        const latest = {
+          name: toCamelCaseFromSvg((getLastInPath(link))),
+          buf: await fs.readFile(link),
+        };
 
         output.data = {
-          cjs: `${cjs[0]}\n\nexports.${name} = ${latest};\n${cjs[1]}\n`,
-          js: `${js[0]}\n\nexport const ${name} = ${latest};\n\n${js[1]}\n`,
-          ts: `${ts[0]}\n\nexport ${lib.getIndexType(name)}\n\n${ts[1]}\n`,
+          cjs: `${cjs[0]}\n\nexports.${name} = ${latest.name};\n${cjs[1]}\n`,
+          js: `${js[0]}\n\nexport const ${name} = ${latest.name};\n\n${js[1]}\n`,
+          ts: `${ts[0]}\n\nexport ${lib.getIndexType(name, latest.buf)}\n\n${ts[1]}\n`,
         };
       } else {
         output.data = {
