@@ -2,7 +2,6 @@ import { promises as fs } from 'fs';
 import svgo from 'svgo';
 import { checkIsSVG, getFileVersion } from '../utils';
 
-const SOURCE = './src';
 const OUTPUT = './packages/vanilla';
 const PRE_SVGO_OPTIONS = {
   plugins: [
@@ -46,7 +45,7 @@ const PRE_SVGO_OPTIONS = {
  * @returns {Promise<[string, string]>}
  */
 const write = async (dir) => {
-  const root = `${SOURCE}/${dir}`;
+  const root = `${OUTPUT}/${dir}`;
   const items = await fs.readdir(root);
   const res = [];
 
@@ -95,25 +94,9 @@ const bind = async (dir, res) => {
  * @returns {Promise<void>}
  */
 export const process = async (dirs) => {
-  if (dirs.length) {
-    await Promise.all(dirs.map(async (dir) => {
-      const res = await write(dir);
+  await Promise.all(dirs.map(async (dir) => {
+    const res = await write(dir);
 
-      await bind(dir, res);
-    }));
-
-    return;
-  }
-
-  const dirents = await fs.readdir(SOURCE, {
-    withFileTypes: true,
-  });
-
-  await Promise.all(dirents.map(async (dirent) => {
-    if (dirent.isDirectory()) {
-      const res = await write(dirent.name);
-
-      await bind(dirent.name, res);
-    }
+    await bind(dir, res);
   }));
 };

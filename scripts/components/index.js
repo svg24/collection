@@ -5,6 +5,10 @@ import * as vue from './vue';
 async function main() {
   const [, , lib, ...dirs] = process.argv;
 
+  if (!dirs.length) {
+    throw new Error('Please specify a directories');
+  }
+
   switch (lib) {
     case 'react': {
       await proc(dirs, [react]);

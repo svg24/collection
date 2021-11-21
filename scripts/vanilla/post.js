@@ -74,17 +74,7 @@ const write = async (dir) => {
  * @returns {Promise<void>}
  */
 export const process = async (dirs) => {
-  if (dirs.length) {
-    await Promise.all(dirs.map(async (dir) => {
-      await write(dir);
-    }));
-
-    return;
-  }
-
-  const dirents = await fs.readdir(OUTPUT, { withFileTypes: true });
-
-  await Promise.all(dirents.map(async (dirent) => {
-    if (dirent.isDirectory()) await write(dirent.name);
+  await Promise.all(dirs.map(async (dir) => {
+    await write(dir);
   }));
 };

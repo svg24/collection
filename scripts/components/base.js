@@ -202,17 +202,12 @@ const writeComponents = async (dir, libs) => {
  * @returns {Promise<void>}
  */
 export const proc = async (dirs, libs) => {
-  const dirents = dirs.length
-    ? dirs
-    : await fs.readdir(SOURCE, { withFileTypes: true });
   const total = [];
 
-  await Promise.all(dirents.map(async (dirent) => {
-    if (dirent.isDirectory()) {
-      const local = await writeComponents(dirent.name, libs);
+  await Promise.all(dirs.map(async (dir) => {
+    const local = await writeComponents(dir, libs);
 
-      total.push(local);
-    }
+    total.push(local);
   }));
 
   await writeRoot(total, libs);

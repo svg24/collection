@@ -4,6 +4,10 @@ import { process as pre } from './pre';
 async function main() {
   const [, , mode, ...dirs] = process.argv;
 
+  if (!dirs.length) {
+    throw new Error('Please specify a directories');
+  }
+
   switch (mode) {
     case 'pre': {
       await pre(dirs);
