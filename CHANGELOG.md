@@ -2,34 +2,30 @@
 
 ## v0.1.0 (2021-10-01)
 
-### Core
-
-- Adobe Acrobat
-- Adobe Acrobat Pro
-- Adobe Aero
-- Adobe After Effects
-- Adobe Animate
-- Adobe Audition
-- Adobe Bridge
-- Adobe Character Animator
-- Adobe Dimension
-- Adobe Dreamweaver
-- Adobe Fonts
-- Adobe Fresco
-- Adobe Illustrator
-- Adobe InCopy
-- Adobe InDesign
-- Adobe Media Encoder
-- Adobe Photoshop
-- Adobe Photoshop Camera
-- Adobe Photoshop Express
-- Adobe Photoshop Lightroom
-- Adobe Photoshop Lightroom Classic
-- Adobe Portfolio
-- Adobe Prelude
-- Adobe Premiere Pro
-- Adobe Premiere Rush
-- Adobe Spark
-- Adobe Stock
-- Adobe XD
-- Behance
+- adobe-acrobat
+- adobe-acrobat-pro
+- adobe-aero
+- adobe-after-effects
+- adobe-animate
+- adobe-audition
+- adobe-bridge
+- adobe-character-animator
+- adobe-dimension
+- adobe-dreamweaver
+- adobe-fonts
+- adobe-fresco
+- adobe-illustrator
+- adobe-in-copy
+- adobe-in-design
+- adobe-media-encoder
+- adobe-photoshop
+- adobe-photoshop-lightroom
+- adobe-photoshop-lightroom-classic
+- adobe-portfolio
+- adobe-prelude
+- adobe-premiere-pro
+- adobe-premiere-rush
+- adobe-spark
+- adobe-stock
+- adobe-xd
+- behance

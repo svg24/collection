@@ -136,22 +136,6 @@
     "src": "https://www.adobe.com/products/photoshop.html"
   },
   {
-    "name": "Adobe Photoshop Camera",
-    "slug": "adobe-photoshop-camera",
-    "company": "Adobe",
-    "category": "Photo",
-    "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/photoshop-camera.html"
-  },
-  {
-    "name": "Adobe Photoshop Express",
-    "slug": "adobe-photoshop-express",
-    "company": "Adobe",
-    "category": "Graphics",
-    "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/photoshop-express.html"
-  },
-  {
     "name": "Adobe Photoshop Lightroom",
     "slug": "adobe-photoshop-lightroom",
     "company": "Adobe",
