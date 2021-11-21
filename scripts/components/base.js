@@ -173,7 +173,7 @@ const writeComponents = async (dir, libs) => {
         output.data = {
           cjs: `${cjs[0]}\n\nexports.${name} = ${latest.name};\n${cjs[1]}\n`,
           js: `${js[0]}\n\nexport const ${name} = ${latest.name};\n\n${js[1]}\n`,
-          ts: `${ts[0]}\n\nexport ${lib.getIndexType(name, latest.buf)}\n\n${ts[1]}\n`,
+          ts: `${ts[0]}\n\nexport ${lib.getType(name, latest.buf)}\n\n${ts[1]}\n`,
         };
       } else {
         output.data = {

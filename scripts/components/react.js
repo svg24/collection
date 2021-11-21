@@ -10,7 +10,7 @@ const OUTPUT = './packages/react';
  * @param {Buffer} buf
  * @returns {string}
  */
-const getDec = (name, buf) => (
+export const getType = (name, buf) => (
   `/**
  * ${getPreview(name, buf)}
  */
@@ -44,13 +44,6 @@ export const getCode = async (name, buf) => {
       .replace(`${imp} "react";`, 'const React = require(\'react\');')
       .replace('export default', `exports.${name} =`),
     js: code.replace(`default ${name};`, `{ ${name} };`),
-    ts: `${imp} 'react';\n\n${getDec(name, buf)}\n\nexport { ${name} };\n`,
+    ts: `${imp} 'react';\n\n${getType(name, buf)}\n\nexport { ${name} };\n`,
   };
 };
-
-/**
- * @param {string} name
- * @param {Buffer} buf
- * @returns {string}
- */
-export const getIndexType = (name, buf) => getDec(name, buf);
