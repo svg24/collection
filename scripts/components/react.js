@@ -2,7 +2,10 @@ import babel from '@babel/core';
 import reactJSX from '@babel/plugin-transform-react-jsx';
 import svgr from '@svgr/core';
 
-const OUTPUT = './packages/react';
+/**
+ * @type {string}
+ */
+export const output = './packages/react';
 
 /**
  * @param {string} name
@@ -18,11 +21,6 @@ declare function ${name}(
   svgRef: React.ForwardedRef<SVGElement>,
 ): JSX.Element;`
 );
-
-/**
- * @type {string}
- */
-export const output = OUTPUT;
 
 /**
  * @param {string} name
