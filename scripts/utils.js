@@ -2,6 +2,17 @@ import path from 'path';
 
 /**
  * @param {string} name
+ * @returns {string | null}
+ */
+export const getFileVersion = (name) => {
+  const match = name.match(/.+-v(?<ver>.*).svg/);
+  const ver = match ? match.groups.ver : null;
+
+  return ver;
+};
+
+/**
+ * @param {string} name
  * @returns {boolean}
  */
 export const checkIsSVG = (name) => path.extname(name) === '.svg';
