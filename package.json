@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "build:components": "node --experimental-specifier-resolution=node scripts/components",
-    "build:vanilla": "node --experimental-specifier-resolution=node scripts/vanilla.js"
+    "build:vanilla": "node --experimental-specifier-resolution=node scripts/vanilla"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
