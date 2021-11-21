@@ -39,10 +39,10 @@ export const toCamelCaseFromSvg = (file) => (
  * @returns {string}
  */
 export const getPreview = (name, buf) => (
-  `![${name}](data:image/svg+xml;base64,${
+  `/**\n* ![${name}](data:image/svg+xml;base64,${
     Buffer.from(buf.toString().replace(
       '<svg',
       '<svg width="64" height="64"',
     )).toString('base64')
-  })`
+  })\n*/\n`
 );

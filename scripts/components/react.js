@@ -9,21 +9,6 @@ export const output = './packages/react';
 
 /**
  * @param {string} name
- * @param {string} preview
- * @returns {string}
- */
-export const getType = (name, preview) => (
-  `/**
- * ${preview}
- */
-declare function ${name}(
-  props: React.ComponentProps<'svg'>,
-  svgRef: React.ForwardedRef<SVGElement>,
-): JSX.Element;`
-);
-
-/**
- * @param {string} name
  * @param {string} content
  * @param {string} preview
  * @returns {Promise<{ cjs: string, js: string, ts: string }>}
@@ -42,6 +27,10 @@ export const getCode = async (name, content, preview) => {
       .replace(`${imp} "react";`, 'const React = require(\'react\');')
       .replace('export default', `exports.${name} =`),
     js: code.replace(`default ${name};`, `{ ${name} };`),
-    ts: `${imp} 'react';\n\n${getType(name, preview)}\n\nexport { ${name} };\n`,
+    ts: `${imp} 'react';\n\n`
+      + `${preview}export declare function ${name}(`
+      + '  props: React.ComponentProps<\'svg\'>'
+      + '  svgRef: React.ForwardedRef<SVGElement>,'
+      + '): JSX.Element;',
   };
 };

@@ -7,18 +7,6 @@ export const output = './packages/vue';
 
 /**
  * @param {string} name
- * @param {string} preview
- * @returns {string}
- */
-export const getType = (name, preview) => (
-  `/**
- * ${preview}
- */
-declare const ${name}: RenderFunction;`
-);
-
-/**
- * @param {string} name
  * @param {string} content
  * @param {string} preview
  * @returns {Promise<{ cjs: string, js: string, ts: string }>}
@@ -41,8 +29,7 @@ export const getCode = async (name, content, preview) => {
       },
     ),
     js: code,
-    ts: `import { RenderFunction } from 'vue';\n\n${
-      getType(name, preview)
-    }\n\nexport { ${name} };\n`,
+    ts: 'import { RenderFunction } from \'vue\';\n\n'
+      + `${preview}export declare function ${name}(): RenderFunction;`,
   };
 };
