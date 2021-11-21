@@ -29,8 +29,8 @@ export const getCode = async (name, content, preview) => {
     js: code.replace(`default ${name};`, `{ ${name} };`),
     ts: `${imp} 'react';\n\n`
       + `${preview}export declare function ${name}(`
-      + '  props: React.ComponentProps<\'svg\'>'
-      + '  svgRef: React.ForwardedRef<SVGElement>,'
+      + 'props: React.ComponentProps<\'svg\'>,'
+      + ' svgRef: React.ForwardedRef<SVGElement>'
       + '): JSX.Element;',
   };
 };
