@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import {
   checkIsSVG,
   getLastInPath,
+  getPreview,
   toCamelCase,
   toCamelCaseFromSvg,
 } from '../utils';
@@ -112,11 +113,12 @@ const writeComponents = async (dir, libs) => {
     const handleFile = async (cur, file) => {
       const buf = await fs.readFile(cur);
       const name = toCamelCaseFromSvg(file);
+      const prev = getPreview(name, buf);
 
       names.push(name);
 
       await Promise.all(libs.map(async (lib) => {
-        const { cjs, js, ts } = await lib.getCode(name, buf);
+        const { cjs, js, ts } = await lib.getCode(name, buf.toString(), prev);
         const out = `${lib.output}/${toCamelCase(dir)}/`;
 
         await fs.mkdir(out, { recursive: true });

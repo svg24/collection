@@ -1,18 +1,17 @@
 import babel from '@babel/core';
 import reactJSX from '@babel/plugin-transform-react-jsx';
 import svgr from '@svgr/core';
-import { getPreview } from '../utils';
 
 const OUTPUT = './packages/react';
 
 /**
  * @param {string} name
- * @param {Buffer} buf
+ * @param {string} preview
  * @returns {string}
  */
-export const getType = (name, buf) => (
+export const getType = (name, preview) => (
   `/**
- * ${getPreview(name, buf)}
+ * ${preview}
  */
 declare function ${name}(
   props: React.ComponentProps<'svg'>,
@@ -27,11 +26,12 @@ export const output = OUTPUT;
 
 /**
  * @param {string} name
- * @param {Buffer} buf
+ * @param {string} content
+ * @param {string} preview
  * @returns {Promise<{ cjs: string, js: string, ts: string }>}
  */
-export const getCode = async (name, buf) => {
-  const component = await svgr.default(buf.toString(), {
+export const getCode = async (name, content, preview) => {
+  const component = await svgr.default(content, {
     ref: true,
   }, { componentName: name });
   const { code } = await babel.transformAsync(component, {
@@ -44,6 +44,6 @@ export const getCode = async (name, buf) => {
       .replace(`${imp} "react";`, 'const React = require(\'react\');')
       .replace('export default', `exports.${name} =`),
     js: code.replace(`default ${name};`, `{ ${name} };`),
-    ts: `${imp} 'react';\n\n${getType(name, buf)}\n\nexport { ${name} };\n`,
+    ts: `${imp} 'react';\n\n${getType(name, preview)}\n\nexport { ${name} };\n`,
   };
 };
