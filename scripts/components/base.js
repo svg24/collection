@@ -19,7 +19,7 @@ const writeRoot = async (total, libs) => {
     .sort(([a], [b]) => a > b)
     .map(([dir, names]) => {
       const sorted = names.sort();
-      const list = `{\n  ${sorted.join(',\n  ')},\n}`;
+      const list = `{ ${sorted.join(', ')}, }`;
 
       return ({
         cjs: [
