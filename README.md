@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  A collection SVG logos for your next beautiful project. Available as <a href="#vanilla">vanilla</a> SVG content, <a href="#react">React</a> and <a href="#vue">Vue</a> components.
+  A collection SVG logos for your next beautiful project.<br>Available as <a href="#vanilla">vanilla</a> SVG content, <a href="#react">React</a> and <a href="#vue">Vue</a> components.
 <p>
 
 ## Introduction
