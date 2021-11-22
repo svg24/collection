@@ -197,17 +197,19 @@ const writeComponents = async (dir, libs) => {
 };
 
 /**
- * @param {string[] | []} dirs
  * @param {any[]} libs
  * @returns {Promise<void>}
  */
-export const proc = async (dirs, libs) => {
+export const proc = async (libs) => {
   const total = [];
+  const dirents = await fs.readdir(SOURCE, { withFileTypes: true });
 
-  await Promise.all(dirs.map(async (dir) => {
-    const local = await writeComponents(dir, libs);
+  await Promise.all(dirents.map(async (dirent) => {
+    if (dirent.isDirectory()) {
+      const local = await writeComponents(dirent.name, libs);
 
-    total.push(local);
+      total.push(local);
+    }
   }));
 
   await writeRoot(total, libs);

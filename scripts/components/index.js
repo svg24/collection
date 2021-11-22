@@ -3,23 +3,19 @@ import * as react from './react';
 import * as vue from './vue';
 
 async function main() {
-  const [, , lib, ...dirs] = process.argv;
-
-  if (!dirs.length) {
-    throw new Error('Please specify a directories');
-  }
+  const [, , lib] = process.argv;
 
   switch (lib) {
     case 'react': {
-      await proc(dirs, [react]);
+      await proc([react]);
       break;
     }
     case 'vue': {
-      await proc(dirs, [vue]);
+      await proc([vue]);
       break;
     }
     default: {
-      await proc(dirs, [react, vue]);
+      await proc([react, vue]);
     }
   }
 }
