@@ -1,4 +1,10 @@
-# SVG24 collection
+<p align="center">
+  <img src="https://raw.githubusercontent.com/svg24/.github/main/collection.svg" alt="SVG24">
+</p>
+
+<p align="center">
+  A collection SVG logos for your next beautiful project. Available as <a href="#vanilla">vanilla</a> SVG content, <a href="#react">React</a> and <a href="#vue">Vue</a> components.
+<p>
 
 ## Introduction
 
