@@ -1,6 +1,6 @@
 {
   "name": "@svg24/react",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "homepage": "https://github.com/svg24/collection#readme",
   "repository": {
     "type": "git",
@@ -12,6 +12,7 @@
     "react": ">= 16.8.0"
   },
   "publishConfig": {
+    "@svg24:registry": "https://npm.pkg.github.com",
     "access": "public"
   }
 }
