@@ -18,8 +18,8 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@svg24'
       - run: npm i && npm run build:components
-      - run: cd /packages/vanilla && npm publish
-      - run: cd /packages/react && npm publish
-      - run: cd /packages/vue && npm publish
+      - run: cd ~/packages/vanilla && npm publish
+      - run: cd ~/packages/react && npm publish
+      - run: cd ~/packages/vue && npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
