@@ -1,6 +1,6 @@
 {
   "name": "@svg24/vanilla",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "homepage": "https://github.com/svg24/collection#readme",
   "repository": {
     "type": "git",
@@ -9,7 +9,6 @@
   },
   "license": "MIT",
   "publishConfig": {
-    "@svg24:registry": "https://npm.pkg.github.com",
     "access": "public"
   }
 }

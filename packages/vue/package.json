@@ -1,6 +1,6 @@
 {
   "name": "@svg24/vue",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "homepage": "https://github.com/svg24/collection#readme",
   "repository": {
     "type": "git",
@@ -12,7 +12,6 @@
     "vue": ">= 3.0.0"
   },
   "publishConfig": {
-    "@svg24:registry": "https://npm.pkg.github.com",
     "access": "public"
   }
 }
