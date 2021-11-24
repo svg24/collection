@@ -1,0 +1,62 @@
+[
+  {
+    "id": "office",
+    "name": "Office"
+  },
+  {
+    "id": "vr",
+    "name": "VR"
+  },
+  {
+    "id": "graphics",
+    "name": "Graphics"
+  },
+  {
+    "id": "animation",
+    "name": "Animation"
+  },
+  {
+    "id": "sound",
+    "name": "Sound"
+  },
+  {
+    "id": "manage",
+    "name": "Manage"
+  },
+  {
+    "id": "design",
+    "name": "Design"
+  },
+  {
+    "id": "code",
+    "name": "Code"
+  },
+  {
+    "id": "font",
+    "name": "Font"
+  },
+  {
+    "id": "graphics",
+    "name": "Graphics"
+  },
+  {
+    "id": "text",
+    "name": "Text"
+  },
+  {
+    "id": "movie",
+    "name": "Movie"
+  },
+  {
+    "id": "social",
+    "name": "Social"
+  },
+  {
+    "id": "stock",
+    "name": "Stock"
+  },
+  {
+    "id": "interface",
+    "name": "Interface"
+  }
+]
