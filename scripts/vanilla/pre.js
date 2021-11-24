@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import svgo from 'svgo';
-import { checkIsSVG, getFileVersion } from '../utils';
+import { checkIsSVG } from '../utils';
 
 const OUTPUT = './packages/vanilla';
 const PRE_SVGO_OPTIONS = {
@@ -42,51 +42,22 @@ const PRE_SVGO_OPTIONS = {
 
 /**
  * @param {string} dir
- * @returns {Promise<[string, string]>}
+ * @returns {Promise<void>}
  */
 const write = async (dir) => {
   const root = `${OUTPUT}/${dir}`;
   const items = await fs.readdir(root);
-  const res = [];
 
   await Promise.all(items.map(async (item) => {
     if (!checkIsSVG(item)) return;
 
     const buf = await fs.readFile(`${root}/${item}`);
     const { data } = svgo.optimize(buf, PRE_SVGO_OPTIONS);
-    const subRoot = `${OUTPUT}/${dir}`;
+    const local = `${OUTPUT}/${dir}`;
 
-    await fs.mkdir(subRoot, { recursive: true });
-    await fs.writeFile(`${subRoot}/${item}`, data, 'utf8');
-
-    res.push([subRoot, item]);
+    await fs.mkdir(local, { recursive: true });
+    await fs.writeFile(`${local}/${item}`, data, 'utf8');
   }));
-
-  return res;
-};
-
-/**
- * @param {string} dir
- * @param {[string, string]} res
- * @returns {Promise<void>}
- */
-const bind = async (dir, res) => {
-  const index = res.reduce((prevIndex, [, curItem], curIndex, arr) => {
-    const ver = getFileVersion(curItem);
-
-    if (!ver) return null;
-
-    const prev = (new Date(arr[prevIndex])).getTime();
-    const cur = (new Date(ver)).getTime();
-
-    return !prevIndex || cur > prev ? curIndex : prevIndex;
-  }, null);
-
-  if (index !== null) {
-    const [root, item] = res[index];
-
-    await fs.symlink(item, `${root}/${dir}.svg`);
-  }
 };
 
 /**
@@ -95,8 +66,6 @@ const bind = async (dir, res) => {
  */
 export const process = async (dirs) => {
   await Promise.all(dirs.map(async (dir) => {
-    const res = await write(dir);
-
-    await bind(dir, res);
+    await write(dir);
   }));
 };

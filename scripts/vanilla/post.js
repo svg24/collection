@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import svgo from 'svgo';
-import { checkIsSVG } from '../utils';
+import { checkIsSVG, getFileVersion } from '../utils';
 
 const OUTPUT = './packages/vanilla';
 const POST_SVGO_OPTIONS = {
@@ -34,9 +34,11 @@ const POST_SVGO_OPTIONS = {
 
 /**
  * @param {string} dir
- * @returns {Promise<void>}
+ * @returns {Promise<[string, string][]>}
  */
 const write = async (dir) => {
+  const res = [];
+
   /**
    * @param {string} root
    * @param {Dirent[]} dirents
@@ -59,6 +61,8 @@ const write = async (dir) => {
         const { data } = svgo.optimize(buf, POST_SVGO_OPTIONS);
 
         await fs.writeFile(cur, data, 'utf8');
+
+        res.push([root, dirent.name]);
       }
     }));
   };
@@ -67,6 +71,32 @@ const write = async (dir) => {
   const dirents = await fs.readdir(root, { withFileTypes: true });
 
   await handler(root, dirents);
+
+  return res;
+};
+
+/**
+ * @param {string} dir
+ * @param {[string, string][]} res
+ * @returns {Promise<void>}
+ */
+const bind = async (dir, res) => {
+  const index = res.reduce((prevIndex, [, curItem], curIndex, arr) => {
+    const ver = getFileVersion(curItem);
+
+    if (!ver) return null;
+
+    const prev = (new Date(arr[prevIndex])).getTime();
+    const cur = (new Date(ver)).getTime();
+
+    return !prevIndex || cur > prev ? curIndex : prevIndex;
+  }, null);
+
+  if (index !== null) {
+    const [root, item] = res[index];
+
+    await fs.symlink(item, `${root}/${dir}.svg`);
+  }
 };
 
 /**
@@ -75,6 +105,7 @@ const write = async (dir) => {
  */
 export const process = async (dirs) => {
   await Promise.all(dirs.map(async (dir) => {
-    await write(dir);
+    const res = await write(dir);
+    await bind(dir, res);
   }));
 };
