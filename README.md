@@ -45,7 +45,7 @@ Install package via npm.
 npm i --save @svg24/vanilla
 ```
 
-The contents of the package are stored in `./packages/vanilla`. Also can be browse on [UNPKG](https://unpkg.com/browse/@svg24/vanilla/).
+The contents of the package are stored in [`./packages/vanilla`](https://github.com/svg24/collection/tree/main/packages/vanilla). Also can be browse on [UNPKG](https://unpkg.com/browse/@svg24/vanilla/).
 
 ### React
 
