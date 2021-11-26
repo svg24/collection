@@ -1,35 +1,15 @@
 [
   {
-    "id": "office",
-    "name": "Office"
-  },
-  {
-    "id": "vr",
-    "name": "VR"
-  },
-  {
-    "id": "graphics",
-    "name": "Graphics"
-  },
-  {
     "id": "animation",
     "name": "Animation"
   },
   {
-    "id": "sound",
-    "name": "Sound"
-  },
-  {
-    "id": "manage",
-    "name": "Manage"
+    "id": "code",
+    "name": "Code"
   },
   {
     "id": "design",
     "name": "Design"
-  },
-  {
-    "id": "code",
-    "name": "Code"
   },
   {
     "id": "font",
@@ -40,23 +20,39 @@
     "name": "Graphics"
   },
   {
-    "id": "text",
-    "name": "Text"
+    "id": "interface",
+    "name": "Interface"
+  },
+  {
+    "id": "manage",
+    "name": "Manage"
   },
   {
     "id": "movie",
     "name": "Movie"
   },
   {
+    "id": "office",
+    "name": "Office"
+  },
+  {
     "id": "social",
     "name": "Social"
+  },
+  {
+    "id": "sound",
+    "name": "Sound"
   },
   {
     "id": "stock",
     "name": "Stock"
   },
   {
-    "id": "interface",
-    "name": "Interface"
+    "id": "text",
+    "name": "Text"
+  },
+  {
+    "id": "vr",
+    "name": "VR"
   }
 ]
