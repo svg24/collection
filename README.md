@@ -1,10 +1,40 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/svg24/.github/main/collection.svg" alt="SVG24">
+  <img
+    alt="Repository preview"
+    src="https://raw.githubusercontent.com/svg24/.github/main/collection.svg"
+  >
 </p>
 
 <p align="center">
   A collection SVG logos for your next beautiful project.<br>Available as <a href="#vanilla">vanilla</a> SVG content, <a href="#react">React</a> and <a href="#vue">Vue</a> components.
 <p>
+
+<p align="center">
+  <a
+    alt="Total vanilla package downloads"
+    href="https://www.npmjs.com/package/@svg24/vanilla"
+  >
+    <img src="https://img.shields.io/npm/dt/@svg24/vanilla?&label=vanilla" />
+  </a>
+  <a
+    alt="Total react package downloads"
+    href="https://www.npmjs.com/package/@svg24/react"
+  >
+    <img src="https://img.shields.io/npm/dt/@svg24/react?&label=react" />
+  </a>
+  <a
+    alt="Total vue package downloads"
+    href="https://www.npmjs.com/package/@svg24/vue"
+  >
+    <img src="https://img.shields.io/npm/dt/@svg24/vue?&label=vue" />
+  </a>
+  <br>
+  <small>
+    <sup>
+      total downloads
+    </sup>
+  </small>
+</p>
 
 ## Introduction
 
