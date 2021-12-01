@@ -20,7 +20,7 @@ npm i --save @svg24/vue
 
 ```vue
 <template>
-  <Github className="logo" />
+  <Github class="logo" />
 </template>
 
 <script setup>
