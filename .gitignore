@@ -1,7 +1,0 @@
-node_modules
-packages/react/*
-!packages/react/package.json
-!packages/react/README.md
-packages/vue/*
-!packages/vue/package.json
-!packages/vue/README.md
