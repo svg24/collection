@@ -5,7 +5,7 @@
     "company": "adobe",
     "category": "office",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/acrobat.html"
+    "product": "https://www.adobe.com/products/acrobat.html"
   },
   {
     "id": "adobe-acrobat-pro",
@@ -13,7 +13,7 @@
     "company": "adobe",
     "category": "office",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/acrobatpro.html"
+    "product": "https://www.adobe.com/products/acrobatpro.html"
   },
   {
     "id": "adobe-aero",
@@ -21,7 +21,7 @@
     "company": "adobe",
     "category": "vr",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/aero.html"
+    "product": "https://www.adobe.com/products/aero.html"
   },
   {
     "id": "adobe-after-effects",
@@ -29,7 +29,7 @@
     "company": "adobe",
     "category": "graphics",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/aftereffects.html"
+    "product": "https://www.adobe.com/products/aftereffects.html"
   },
   {
     "id": "adobe-animate",
@@ -37,7 +37,7 @@
     "company": "adobe",
     "category": "animation",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/animate.html"
+    "product": "https://www.adobe.com/products/animate.html"
   },
   {
     "id": "adobe-audition",
@@ -45,7 +45,7 @@
     "company": "adobe",
     "category": "sound",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/audition.html"
+    "product": "https://www.adobe.com/products/audition.html"
   },
   {
     "id": "adobe-bridge",
@@ -53,7 +53,7 @@
     "company": "adobe",
     "category": "manage",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/bridge.html"
+    "product": "https://www.adobe.com/products/bridge.html"
   },
   {
     "id": "adobe-character-animator",
@@ -61,7 +61,7 @@
     "company": "adobe",
     "category": "animation",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/character-animator.html"
+    "product": "https://www.adobe.com/products/character-animator.html"
   },
   {
     "id": "adobe-dimension",
@@ -69,7 +69,7 @@
     "company": "adobe",
     "category": "design",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/dimension.html"
+    "product": "https://www.adobe.com/products/dimension.html"
   },
   {
     "id": "adobe-dreamweaver",
@@ -77,7 +77,7 @@
     "company": "adobe",
     "category": "code",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/dreamweaver.html"
+    "product": "https://www.adobe.com/products/dreamweaver.html"
   },
   {
     "id": "adobe-fonts",
@@ -85,7 +85,7 @@
     "company": "adobe",
     "category": "font",
     "date": "2021-10-01",
-    "src": "https://fonts.adobe.com"
+    "product": "https://fonts.adobe.com"
   },
   {
     "id": "adobe-fresco",
@@ -93,7 +93,7 @@
     "company": "adobe",
     "category": "graphics",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/fresco.html"
+    "product": "https://www.adobe.com/products/fresco.html"
   },
   {
     "id": "adobe-illustrator",
@@ -101,7 +101,7 @@
     "company": "adobe",
     "category": "graphics",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/illustrator.html"
+    "product": "https://www.adobe.com/products/illustrator.html"
   },
   {
     "id": "adobe-in-copy",
@@ -109,7 +109,7 @@
     "company": "adobe",
     "category": "text",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/incopy.html"
+    "product": "https://www.adobe.com/products/incopy.html"
   },
   {
     "id": "adobe-in-design",
@@ -117,7 +117,7 @@
     "company": "adobe",
     "category": "graphics",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/indesign.html"
+    "product": "https://www.adobe.com/products/indesign.html"
   },
   {
     "id": "adobe-media-encoder",
@@ -125,7 +125,7 @@
     "company": "adobe",
     "category": "movie",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/media-encoder.html"
+    "product": "https://www.adobe.com/products/media-encoder.html"
   },
   {
     "id": "adobe-photoshop",
@@ -133,7 +133,7 @@
     "company": "adobe",
     "category": "graphics",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/photoshop.html"
+    "product": "https://www.adobe.com/products/photoshop.html"
   },
   {
     "id": "adobe-photoshop-lightroom",
@@ -141,7 +141,7 @@
     "company": "adobe",
     "category": "graphics",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/photoshop-lightroom.html"
+    "product": "https://www.adobe.com/products/photoshop-lightroom.html"
   },
   {
     "id": "adobe-photoshop-lightroom-classic",
@@ -149,7 +149,7 @@
     "company": "adobe",
     "category": "graphics",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/photoshop-lightroom-classic.html"
+    "product": "https://www.adobe.com/products/photoshop-lightroom-classic.html"
   },
   {
     "id": "adobe-portfolio",
@@ -157,7 +157,7 @@
     "company": "adobe",
     "category": "social",
     "date": "2021-10-01",
-    "src": "https://portfolio.adobe.com"
+    "product": "https://portfolio.adobe.com"
   },
   {
     "id": "adobe-prelude",
@@ -165,7 +165,7 @@
     "company": "adobe",
     "category": "manage",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/prelude.html"
+    "product": "https://www.adobe.com/products/prelude.html"
   },
   {
     "id": "adobe-premiere-pro",
@@ -173,7 +173,7 @@
     "company": "adobe",
     "category": "movie",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/premiere.html"
+    "product": "https://www.adobe.com/products/premiere.html"
   },
   {
     "id": "adobe-premiere-rush",
@@ -181,7 +181,7 @@
     "company": "adobe",
     "category": "movie",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/premiere-rush.html"
+    "product": "https://www.adobe.com/products/premiere-rush.html"
   },
   {
     "id": "adobe-spark",
@@ -189,7 +189,7 @@
     "company": "adobe",
     "category": "graphics",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/spark.html"
+    "product": "https://www.adobe.com/products/spark.html"
   },
   {
     "id": "adobe-stock",
@@ -197,7 +197,7 @@
     "company": "adobe",
     "category": "stock",
     "date": "2021-10-01",
-    "src": "https://stock.adobe.com"
+    "product": "https://stock.adobe.com"
   },
   {
     "id": "adobe-xd",
@@ -205,7 +205,7 @@
     "company": "adobe",
     "category": "interface",
     "date": "2021-10-01",
-    "src": "https://www.adobe.com/products/xd.html"
+    "product": "https://www.adobe.com/products/xd.html"
   },
   {
     "id": "behance",
@@ -213,6 +213,6 @@
     "company": "adobe",
     "category": "social",
     "date": "2021-10-01",
-    "src": "https://www.behance.net"
+    "product": "https://www.behance.net"
   }
 ]
